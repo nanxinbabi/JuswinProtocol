@@ -1,0 +1,6 @@
+framework module JuswinProtocol {
+  umbrella header "JuswinProtocol-umbrella.h"
+
+  export *
+  module * { export * }
+}
