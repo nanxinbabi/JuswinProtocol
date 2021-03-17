@@ -60,7 +60,7 @@ extension AlbumSavable {
             alert.addAction(cancelAc)
             let settingAc = UIAlertAction(title: "设置", style: .default) { _ in
                 if #available(iOS 10.0, *) {
-                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:])) { _ in}
+                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
                 } else {
                     // Fallback on earlier versions
                 }
@@ -313,7 +313,3 @@ extension UITableViewCell: Registerable {}
 extension UICollectionReusableView: Registerable {}
 extension UITableViewHeaderFooterView: Registerable {}
 
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
-}

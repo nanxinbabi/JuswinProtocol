@@ -31,6 +31,8 @@ A protocol tool write by Swift
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'JuswinProtocol/Classes/**/*'
+
+  s.swift_versions = '5.0'
   
   # s.resource_bundles = {
   #   'JuswinProtocol' => ['JuswinProtocol/Assets/*.png']
